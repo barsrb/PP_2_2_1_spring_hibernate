@@ -9,4 +9,6 @@ public interface UserDao {
    List<User> listUsers();
 
     void update(User user);
+
+    List<User> findUsersByCarModelAndSeries(String model, int series);
 }

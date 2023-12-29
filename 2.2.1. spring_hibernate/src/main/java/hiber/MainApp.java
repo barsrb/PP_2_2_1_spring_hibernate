@@ -71,6 +71,12 @@ public class MainApp {
             System.out.println("UserID: " + user.getId() + " without car");
          }
       }
+
+      users = userService.findUsersByCarModelAndSeries(car1.getModel(), car1.getSeries());
+      for (User user : users) {
+         System.out.println("UserID: " + user.getId() + " with car " +
+                 user.getCar().getModel() + " " + user.getCar().getSeries());
+      }
       context.close();
    }
 }
