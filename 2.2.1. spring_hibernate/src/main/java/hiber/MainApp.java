@@ -72,8 +72,8 @@ public class MainApp {
          }
       }
 
-      users = userService.findUsersByCarModelAndSeries(car1.getModel(), car1.getSeries());
-      for (User user : users) {
+      User user = userService.findUserByCarModelAndSeries(car1.getModel(), car1.getSeries());
+      if (user != null) {
          System.out.println("UserID: " + user.getId() + " with car " +
                  user.getCar().getModel() + " " + user.getCar().getSeries());
       }

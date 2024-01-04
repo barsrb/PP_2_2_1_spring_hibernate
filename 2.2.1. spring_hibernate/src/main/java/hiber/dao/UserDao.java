@@ -10,5 +10,5 @@ public interface UserDao {
 
     void update(User user);
 
-    List<User> findUsersByCarModelAndSeries(String model, int series);
+    User findUserByCarModelAndSeries(String model, int series);
 }
